@@ -90,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <?php 
                 if(!empty($login_err))
-                    echo '<div class="alert">' . $login_err . '</div><br>';
+                    echo "<div class=''><p class='alert'>" . $login_err . '</p></div><br>';
             ?>
             <div class="btn"><input type="submit" class="btn-login" value="LOGIN"></div>
         </form>
