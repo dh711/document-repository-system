@@ -16,7 +16,8 @@ class Database {
     }
 
     public static function query($query, $paramType = "", $params = array()) {
-        $stmt = mysqli_prepare(self::$conn, $query);
+        $stmt = mysqli_stmt_init(self::$conn);
+        mysqli_stmt_prepare($stmt, $query);
         mysqli_stmt_bind_param($stmt, $paramType, ...$params);
         
         if (mysqli_stmt_execute($stmt)) {
