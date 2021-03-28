@@ -1,0 +1,61 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background-color: #967BDC;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar .bar-link {
+    display: block;
+    color: #FAFAFA;
+    padding: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--font-text);
+    font-weight: var(--font-bold);
+}
+
+/* Active/current link */
+.sidebar .bar-link .active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Links on mouse-over */
+.sidebar .bar-link:hover:not(.active) {
+    background-color: #7BDC96;
+    color: white;
+}
+
+.sidebar .username {
+    display: block;
+    padding: 16px;
+    font-size: var(--font-text);
+    font-weight: var(--font-bold);
+    color: #FAFAFA;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 1px 16px;
+    height: 100vw;
+    overflow: hidden;
+}
+
+.content .page-title {
+    font-size: var(--font-title);
+    font-weight: var(--font-bold);
+    color: #FAFAFA;
+    text-transform: uppercase;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+
+.overflow-hidden {
+    /* Remove if content needs more space. */
+    overflow: hidden;
+}

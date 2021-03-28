@@ -5,7 +5,8 @@
     --text-display: #212121;
     --text-title: #212121;
     --alert: #C91F37;
-    --alert-text: #FAFAFA; 
+    --alert-text: #FAFAFA;
+    --sidebar-text: #FAFAFA;
 
     /* Font sizes. */
     --font-alert: 12.5px;
