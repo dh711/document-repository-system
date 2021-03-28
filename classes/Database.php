@@ -3,12 +3,18 @@
 class Database {
     public static $host = "localhost";
     public static $username = "root";
-    public static $password = "";
-    public static $dbName = "project";
+    public static $password = "dd@18455814";
+    public static $dbName = "Project";
     private static $conn;
 
     public static function connect() {
         self::$conn = mysqli_connect(self::$host, self::$username, self::$password, self::$dbName);
+        if (!self::$conn) {
+            die("Connection Error: " . mysqli_error(self::$conn));
+        }
+        else {
+            print("Connection Success");
+        }
     }
 
     public static function disconnect() {
@@ -21,7 +27,7 @@ class Database {
         mysqli_stmt_bind_param($stmt, $paramType, ...$params);
         
         if (mysqli_stmt_execute($stmt)) {
-            // echo "Query execution successful.<br>";
+//             echo "Query execution successful.<br>";
         }
         else {
             echo "Oops! Something went wrong. Please try again later. <br>";

@@ -1,8 +1,9 @@
 <?php 
 session_start();
  
-if(isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === true)
+if (isset($_SESSION["loggedIn"]) && $_SESSION["loggedIn"] === true) {
     header("Location: ../$role/index.php");
+}
 
 require_once("../classes/Database.php");
 
@@ -33,10 +34,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if(empty($username_err) && empty($password_err) && empty($role_err)) {
         $query = "SELECT `email_id`, `password` FROM `$role` WHERE `email_id` = ?";
-        
+        print($query);
         Database::connect();
         $result = Database::query($query, "s", array($username));
-        
         if (mysqli_num_rows($result) === 0) {
             $login_err = "Invalid username.";
         }
@@ -84,13 +84,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="<?php echo (!empty($password_err)) ? '' : 'display-none'; ?>"><?php echo "<p class='alert'>" . $password_err . "</p>"; ?></div>
             </div>
             <div class="form-group radio">
-                <input type="radio" name="role" value="student" class=""><label class="radio-label"> STUDENT</label>
-                <input type="radio" name="role" value="faculty" class=""><label class="radio-label"> FACULTY</label><br>
+                <input type="radio" name="role" value="Student" class=""><label class="radio-label"> STUDENT</label>
+                <input type="radio" name="role" value="Faculty" class=""><label class="radio-label"> FACULTY</label><br>
                 <div class="<?php echo (!empty($role_err)) ? '' : 'display-none'; ?>"><?php echo "<p class='alert'>" . $role_err . "</p>"; ?></div>
             </div>
             <?php 
-                if(!empty($login_err))
-                    echo "<div class=''><p class='alert'>" . $login_err . '</p></div><br>';
+            if(!empty($login_err)) {
+                echo "<div class=''><p class='alert'>" . $login_err . '</p></div><br>';
+            }
             ?>
             <div class="btn"><input type="submit" class="btn-login" value="LOGIN"></div>
         </form>
