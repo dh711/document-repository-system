@@ -7,7 +7,7 @@ body {
 .form { 
     width: 300px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 90px;
     background-color: var(--card);
     color: var(--text-display);
     border-radius: 5px;
@@ -31,6 +31,7 @@ form {
     font-size: var(--font-title);
     color: var(--text-title);
     margin-bottom: 35px;
+    text-transform: uppercase;
 }
 
 .form .alert {
