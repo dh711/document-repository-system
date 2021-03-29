@@ -54,36 +54,36 @@ create table CourseDocuments (
 create table Course_Student (
     course_id varchar(10) not null,
     student_id varchar(10) not null,
-    foreign key (student_id) references Student(rollNo),
+    foreign key (student_id) references student(rollNo),
     foreign key (course_id) references Course(id)
 );
 
 create table Teacher_Course (
-	course_id varchar(10) not null,
-    teacher_id varchar(10) not null,
+    course_id varchar(10) not null,
+    faculty_id varchar(10) not null,
     foreign key (course_id) references Course(id),
-    foreign key (teacher_id) references Teacher(id)
+    foreign key (faculty_id) references faculty(id)
 );
 
 create table Attendance (
-	student_id varchar(8) not null,
+    student_id varchar(8) not null,
     course_id varchar(10) not null,
-    teacher_id varchar(10) not null,
+    faculty_id varchar(10) not null,
     date date not null,
     present enum('y', 'n') not null,
-    foreign key (student_id) references Student(rollNo),
+    foreign key (student_id) references student(rollNo),
     foreign key (course_id) references Course(id),
-    foreign key (teacher_id) references Teacher(id)
+    foreign key (faculty_id) references faculty(id)
 );
 
 create table Payment (
-	id int not null auto_increment primary key,
-	amount int not null,
+    id int not null auto_increment primary key,
+    amount int not null,
     UTR int not null,
     student_id varchar(8) not null,
     date date not null,
     time time not null,
     Account_Holder_Name varchar(30) not null,
     remarks varchar(30) not null,
-    foreign key (student_id) references Student(rollNo)
+    foreign key (student_id) references student(rollNo)
 );
