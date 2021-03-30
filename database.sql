@@ -23,19 +23,19 @@ create table faculty (
 );
 
 create table Department (
-	id varchar(10) not null primary key,
-    name varchar(10) not null
+    id varchar(10) not null primary key,
+    name varchar(50) not null
 );
 
 create table Program (
-	id varchar(10) not null primary key,
-    name varchar(10) not null
+    id varchar(10) not null primary key,
+    name varchar(50) not null
 );
 
 create table Course (
     id varchar(10) not null primary key,
-    name varchar(20) not null,
-    description varchar(50) not null,
+    name varchar(50) not null,
+    description varchar(255) not null,
     semester int not null,
     program_id varchar(10) not null,
     department_id varchar(10) not null,
