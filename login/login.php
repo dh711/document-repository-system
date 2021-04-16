@@ -68,12 +68,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Login</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
 </head>
 <body>
+    <div class="spacer">
+        <div class="title">Welcome</div>
+    </div>
     <div class="form">
-        <div class="title">Login</div>
-
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
             <div class="form-group text-field">
                 <input type="text" name="username" value="<?=$username?>" class="" placeholder="Username"><br>
@@ -83,19 +87,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="password" name="password" value="<?=$password?>" class="" placeholder="Password"><br>
                 <div class="<?php echo (!empty($password_err)) ? '' : 'display-none'; ?>"><?php echo "<p class='alert'>" . $password_err . "</p>"; ?></div>
             </div>
-            <div class="form-group radio">
-                <input type="radio" name="role" value="student" class=""><label class="radio-label"> STUDENT</label>
-                <input type="radio" name="role" value="faculty" class=""><label class="radio-label"> FACULTY</label><br>
+            <div class="form-group">
+                <div class="radio">
+                    <label class="radio-label"><input type="radio" name="role" value="student" class=""> STUDENT</label>
+                    <label class="radio-label"><input type="radio" name="role" value="faculty" class=""> FACULTY</label><br><br>
+                </div>
                 <div class="<?php echo (!empty($role_err)) ? '' : 'display-none'; ?>"><?php echo "<p class='alert'>" . $role_err . "</p>"; ?></div>
             </div>
             <?php 
                 if(!empty($login_err))
                     echo "<div class=''><p class='alert'>" . $login_err . '</p></div><br>';
             ?>
-            <div class="btn"><input type="submit" class="btn-login" value="LOGIN"></div>
+            <div class="btn">
+                <input type="submit" class="btn-login" value="LOGIN">
+            </div>
         </form>
-
-
     </div>
 </body>
 </html>
