@@ -53,14 +53,14 @@ else {
             ?>
         </div>
 
-        <div class="tabcontent display-none" id="courses">
+        <div class="courses tabcontent display-none" id="courses">
             <h2 class="sub-title">Courses.</h2>
             <?php 
-                
+                include_once('../common/courses.php');
             ?>
         </div>
 
-        <div class="tabcontent display-none" id="course-docs">
+        <div class="courses tabcontent display-none" id="course-docs">
             <h2 class="sub-title">Upload Course Documents.</h2>
             <?php 
                 include_once('./uploadForm.php');
