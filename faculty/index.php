@@ -31,7 +31,7 @@ else
     </div>
 
     <div class="content">
-        <h2 class="page-title">Student Dashboard</h2>
+        <h2 class="page-title">Faculty Dashboard</h2>
 
         <div class="tabcontent display-none" id="info">
             <h2 class="sub-title">Information</h2>
@@ -42,6 +42,9 @@ else
 
         <div class="tabcontent display-none" id="courses">
             <h2 class="sub-title">Courses</h2>
+            <?php 
+                include_once('./uploadForm.php');
+            ?>
         </div>
 
         <div class="tabcontent display-none" id="course-docs">

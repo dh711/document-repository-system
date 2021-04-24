@@ -9,6 +9,7 @@ class Database {
 
     public static function connect() {
         self::$conn = mysqli_connect(self::$host, self::$username, self::$password, self::$dbName);
+        return mysqli_connect_error();
     }
 
     public static function disconnect() {
