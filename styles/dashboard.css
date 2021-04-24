@@ -217,6 +217,7 @@ table .doc-head {
     letter-spacing: 0.1vw;
     font-weight: 500;
     font-size: 1vw;
+    text-align: center;
 }
 
 .courses {
