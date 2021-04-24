@@ -1,18 +1,18 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Student
- *
- * @author dhwanil
- */
 class Student {
-    public static function getCourses($rollmo) {
-        $query = "SELECT ";
+    public static function getCourses() {
+        $courses = array();
+        $query = "SELECT course.id, course.name FROM course INNER JOIN course_student INNER JOIN student ON course_student.course_id = course.id WHERE student.email_id = ?;";
+        
+        Database::connect();
+        $result = Database::query($query, "s", array($_SESSION['username']));
+        while ($row = mysqli_fetch_row($result)) {
+            array_push($courses, array($row[0], $row[1]));
+        }
+        Database::disconnect();
+        return $courses;
     }
 }
+
+?>

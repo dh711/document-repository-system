@@ -42,6 +42,9 @@ else
 
         <div class="tabcontent display-none" id="courses">
             <h2 class="sub-title">Courses</h2>
+            <?php 
+                include_once('../common/courses.php');
+            ?>
         </div>
 
         <div class="tabcontent display-none" id="course-docs">
