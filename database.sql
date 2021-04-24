@@ -44,9 +44,9 @@ create table Course (
 );
 
 create table CourseDocuments (
-    id int not null primary key,
-    name varchar(20) not null, 
-    file blob not null,
+    id int not null primary key auto_increment,
+    name varchar(30) not null, 
+    path varchar(100) not null,
     course_id varchar(10) not null,
     foreign key (course_id) references Course(id)
 );
