@@ -16,7 +16,7 @@ else
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
     <script type="text/javascript" src="../scripts/tabs.js"></script>
-    <title>Student Dashboard</title>
+    <title>Faculty Dashboard</title>
 </head>
 <body>
     <div class="sidebar">
@@ -50,7 +50,6 @@ else
             <h2 class="sub-title">Course Documents</h2>
             <?php 
                 include_once('./uploadForm.php');
-                echo "courses"
             ?>
         </div>
 

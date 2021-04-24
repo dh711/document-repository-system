@@ -10,7 +10,7 @@ class Faculty {
         while ($row = mysqli_fetch_row($result)) {
             array_push($courses, array($row[0], $row[1]));
         }
-        print_r($courses);
+        // print_r($courses);
         Database::disconnect();
         return $courses;
     }
