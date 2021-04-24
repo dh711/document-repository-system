@@ -64,3 +64,10 @@ create table Teacher_Course (
     foreign key (course_id) references Course(id),
     foreign key (faculty_id) references faculty(id)
 );
+
+create table messages (
+    message_id int primary key auto_increment,
+    message text not null,
+    course_id varchar(10) not null,
+    foreign key (course_id) references Course(id)
+);

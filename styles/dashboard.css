@@ -46,8 +46,9 @@ body {
     display: block;
     padding: 16px;
     font-size: var(--font-text);
-    font-weight: var(--font-bold);
+    font-weight: 500;
     color: #FAFAFA;
+    font-family: 'DM Mono', monospace;
 }
 
 .content {
@@ -85,6 +86,11 @@ body {
 .information {
     height: 400px;
     width: 400px;
+}
+
+.info-text {
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
 }
 
 .btn {
@@ -138,5 +144,29 @@ select {
 
 table .doc-head {
     margin-bottom: 10px;;
+}
+
+.msg-group textarea {
+    resize: none;
+}
+
+.message-blob {
+    background-color: #0652DD;
+    padding: 1px;
+    padding-left: 15px;
+    border-radius: 15px 15px 15px 0px;
+    font-family: DM Mono, monospace;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.message-blob-error {
+    background-color: #EA2027;
+    padding: 1px;
+    padding-left: 15px;
+    border-radius: 15px 15px 15px 0px;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 14px;
 }
 

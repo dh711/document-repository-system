@@ -21,9 +21,8 @@ $courses = Student::getCourses();
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $course = $_POST["course"];
-
     if(isset($_POST["search"])) {
+        $course = isset($_POST["course"])?$_POST["course"]:"";
         $docs = Student::getDocs($course);
         Student::printDocs($docs);
     }

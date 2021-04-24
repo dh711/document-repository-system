@@ -12,35 +12,35 @@
             <table class="information">
                 <tr>
                     <th align="left">ROLE</th>
-                    <td>'.$role.'</td>
-                </tr>
-                <tr>
-                    <th align="left">EMAIL ID</th>
-                    <td>'.$result['email_id'].'</td>
+                    <td class="info-text">'.$role.'</td>
                 </tr>
                 <tr>
                     <th align="left">ROLL NUMBER</th>
-                    <td>'.$result['rollno'].'</td>
+                    <td class="info-text">'.$result['rollno'].'</td>
                 </tr>
                 <tr>
                     <th align="left">FIRST NAME</th>
-                    <td>'.$result['first_name'].'</td>
+                    <td class="info-text">'.$result['first_name'].'</td>
                 </tr>
                 <tr>
                     <th align="left">LAST NAME</th>
-                    <td>'.$result['last_name'].'</td>
+                    <td class="info-text">'.$result['last_name'].'</td>
                 </tr>
                 <tr>
                     <th align="left">ADDRESS</th>
-                    <td>'.$result['address'].'</td>
+                    <td class="info-text">'.$result['address'].'</td>
+                </tr>
+                <tr>
+                    <th align="left">EMAIL ID</th>
+                    <td class="info-text">'.$result['email_id'].'</td>
                 </tr>
                 <tr>
                     <th align="left">PHONE NUMBER</th>
-                    <td>'.$result['phone_no'].'</td>
+                    <td class="info-text">'.$result['phone_no'].'</td>
                 </tr>
                 <tr>
                     <th align="left">DATE OF BIRTH</th>
-                    <td>'.$result['DOB'].'</td>
+                    <td class="info-text">'.$result['DOB'].'</td>
                 </tr>
             </table>
         ');
@@ -50,27 +50,27 @@
             <table class="information">
                 <tr>
                     <th align="left">ROLE</th>
-                    <td colspan>'.$role.'</td>
-                </tr>
-                <tr>
-                    <th align="left">EMAIL ID</th>
-                    <td>'.$result['email_id'].'</td>
+                    <td class="info-text">'.$role.'</td>
                 </tr>
                 <tr>
                     <th align="left">FACULTY ID</th>
-                    <td>'.$result['id'].'</td>
+                    <td class="info-text">'.$result['id'].'</td>
                 </tr>
                 <tr>
                     <th align="left">FIRST NAME</th>
-                    <td>'.$result['first_name'].'</td>
+                    <td class="info-text">'.$result['first_name'].'</td>
                 </tr>
                 <tr>
                     <th align="left">LAST NAME</th>
-                    <td>'.$result['last_name'].'</td>
+                    <td class="info-text">'.$result['last_name'].'</td>
+                </tr>
+                <tr>
+                    <th align="left">EMAIL ID</th>
+                    <td class="info-text">'.$result['email_id'].'</td>
                 </tr>
                 <tr>
                     <th align="left">PHONE NUMBER</th>
-                    <td>'.$result['phone_no'].'</td>
+                    <td class="info-text">'.$result['phone_no'].'</td>
                 </tr>
             </table>
         ');

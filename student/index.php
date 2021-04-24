@@ -10,6 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['search'])) {
         $activeTab = 3;
     }
+    if (isset($_POST['receive'])) {
+        $activeTab = 4;
+    }
+
 }
 else {
     $activeTab = 1;
@@ -24,6 +28,8 @@ else {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <script type="text/javascript" src="../scripts/tabs.js"></script>
     <title>Student Dashboard</title>
 </head>
@@ -65,7 +71,7 @@ else {
         <div class="messages tabcontent display-none" id="msg">
             <h2 class="sub-title">Messages.</h2>
             <?php 
-                include_once('./dlFiles.php');
+                include_once('./getMsg.php');
             ?>
         </div>
     </body>

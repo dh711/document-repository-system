@@ -28,6 +28,13 @@ class Student {
     }
 
     public static function printDocs($docs) {
+        if (empty($docs)) {
+            echo "<br><div class='message-blob-error'>
+                    <p class='message-text'>No documents found!</p>
+                </div><br>";
+                return;
+        }
+
         echo "<br><table class='docs'>
                 <tr class='doc-head'><th align='left'>Documents available...</th></tr>
                 <tr></tr><tr></tr><tr></tr><tr></tr>";
