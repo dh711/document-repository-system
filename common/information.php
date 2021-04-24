@@ -44,6 +44,6 @@ echo('
         </tr>
 
 ');
-// temp
+
 Database::disconnect();
 ?>
