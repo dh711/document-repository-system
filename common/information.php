@@ -11,7 +11,6 @@ $result = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
 if ($role=="student") {
     echo('
-    <center>
         <table border="1">
             <tr>
                 <th colspan="2">'.$role.' Information</th>
@@ -43,11 +42,11 @@ if ($role=="student") {
                 <td>D.O.B.</td>
                 <td>'.$result['DOB'].'</td>
             </tr>
+        </table>
     ');
 }
 else if ($role == "faculty")  {
     echo('
-    <center>
         <table border="1">
             <tr>
                 <th colspan="2">'.$role.' Information</th>
@@ -71,6 +70,7 @@ else if ($role == "faculty")  {
                 <td>Phone No.</td>
                 <td>'.$result['phone_no'].'</td>
             </tr>
+        </table>
     ');
 }
 Database::disconnect();

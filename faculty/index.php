@@ -25,7 +25,6 @@ else
         <a class="tablinks" id="2" onclick="openTab(event, 'courses')">Courses</a>
         <a class="tablinks" id="3" onclick="openTab(event, 'course-docs')">Course Documents</a>
         <a class="tablinks" id="4" onclick="openTab(event, 'attendance')">Attendance</a>
-        <a class="tablinks" id="5" onclick="openTab(event, '')">Link 1</a>
         <br><br>
         <a class="tablinks" href="../login/logout.php" id="4" class="bar-link">Logout</a>
     </div>
@@ -43,12 +42,16 @@ else
         <div class="tabcontent display-none" id="courses">
             <h2 class="sub-title">Courses</h2>
             <?php 
-                include_once('./uploadForm.php');
+                
             ?>
         </div>
 
         <div class="tabcontent display-none" id="course-docs">
             <h2 class="sub-title">Course Documents</h2>
+            <?php 
+                include_once('./uploadForm.php');
+                echo "courses"
+            ?>
         </div>
 
         <div class="tabcontent display-none" id="attendance">
