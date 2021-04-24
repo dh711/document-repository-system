@@ -11,9 +11,9 @@ body {
     margin: 0;
     padding: 0;
     width: 25%;
-    background-color: #967BDC;
+    background-color: #2c3e50;
     height: 100%;
-    border-radius: 10px 0 0 10px;
+    border-radius: 20px 0 0 20px;
 }
 
 /* Sidebar links */
@@ -29,7 +29,7 @@ body {
 
 /* Active/current link */
 .sidebar .active {
-    background-color: #7BDC96;
+    background-color: #10ac84;
     color: white;
     font-weight: var(--font-bold);
 
@@ -37,7 +37,7 @@ body {
 
 /* Links on mouse-over */
 .sidebar .tablinks:hover:not(.active) {
-    background-color: #7BDC96;
+    background-color: #10ac84;
     color: white;
     font-weight: var(--font-bold);
 }
@@ -53,8 +53,8 @@ body {
 .content {
     height: 100%;
     width: 75%;
-    background-color: #FAFAFA;
-    border-radius: 0 10px 10px 0;
+    background-color: #F0F0F0;
+    border-radius: 0 20px 20px 0;
 }
 
 .content .page-title {
@@ -66,3 +66,77 @@ body {
     margin-top: 35px;
     letter-spacing: 1.5px;
 }
+
+.tabcontent {
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: #10ac84;
+    border-radius: 20px;
+    padding: 15px;
+    padding-left: 30px;
+    height: 78.5%;
+    color: white;
+}
+
+.messages {
+    overflow-y: scroll;
+}
+
+.information {
+    height: 400px;
+    width: 400px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-search {
+    display: block;
+    border: 2px solid #e66767;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    background-color:#e66767;
+    font-weight: var(--font-display);
+}
+
+input[type="text"] {
+    background: #2c3e50;
+    border: none;
+    width: 200px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.5; /* Firefox */
+  }
+
+.btn-search:hover {
+    background-color: #e66767;
+    color: #FAFAFA;
+    font-weight: var(--font-bold);
+}
+
+select {
+    background: #2c3e50;
+    border: none;
+    width: 200px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    appearance: none;
+}
+
+table .doc-head {
+    margin-bottom: 10px;;
+}
+

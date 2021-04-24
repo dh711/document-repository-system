@@ -42,28 +42,28 @@ else {
             <h2 class="page-title">Student Dashboard</h2>
 
         <div class="tabcontent active" id="info">
-            <h2 class="sub-title">Information</h2>
+            <h2 class="sub-title">General Information.</h2>
             <?php 
                 include_once('../common/information.php');
             ?>
         </div>
 
             <div class="tabcontent display-none" id="courses">
-                <h2 class="sub-title">Courses</h2>
+                <h2 class="sub-title">Courses enrolled.</h2>
                 <?php 
                     include_once('../common/courses.php');
                 ?>
             </div>
 
         <div class="tabcontent display-none" id="course-docs">
-            <h2 class="sub-title">Course Documents</h2>
+            <h2 class="sub-title">Course Documents.</h2>
             <?php 
                 include_once('./dlFiles.php');
             ?>
         </div>
 
-        <div class="tabcontent display-none" id="msg">
-            <h2 class="sub-title">Messages</h2>
+        <div class="messages tabcontent display-none" id="msg">
+            <h2 class="sub-title">Messages.</h2>
             <?php 
                 include_once('./dlFiles.php');
             ?>

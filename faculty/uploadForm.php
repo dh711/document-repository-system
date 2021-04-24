@@ -68,14 +68,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <br><br>
     <div class="form-group">
-        <input type="file" name="file">
+        <input type="file" name="file" class="file-btn" id="file">
     </div>
     <br><br>
     <div class="form-group text-field">
         <input type="text" name="filename" class="" placeholder="Filename"><br>
     </div>
     <br><br>
-    <input type="submit" name="upload" value="Upload">
+    <input type="submit" name="upload" value="Upload" class="btn btn-search">
 </form>
 
 <span class="<?php echo $res_type?'success':'error';?>"><?=$res?></span>

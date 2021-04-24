@@ -28,10 +28,11 @@ class Student {
     }
 
     public static function printDocs($docs) {
-        echo "<table>
-                <tr><th>Documents</th></tr>";
+        echo "<br><table class='docs'>
+                <tr class='doc-head'><th align='left'>Documents available...</th></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>";
                 for ($i = 0; $i < count($docs); $i++) {
-                    echo "<tr><td><a href='{$docs[$i][1]}'>{$docs[$i][0]}</a></td></tr>";
+                    echo "<tr><td><img src='../icons/docs.png' width='16px'>&nbsp;&nbsp;<a href='{$docs[$i][1]}'>{$docs[$i][0]}</a></td></tr><tr></tr><tr></tr>";
                 }
         echo " </table>";
     }

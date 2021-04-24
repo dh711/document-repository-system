@@ -9,35 +9,37 @@
 
     if ($role=="student") {
         echo('
-            <table border="1">
+            <table class="information">
                 <tr>
-                    <th colspan="2">'.$role.' Information</th>
+                    <th align="left">ROLE</th>
+                    <td>'.$role.'</td>
                 </tr>
                 <tr>
-                    <td colspan="2">'.$result['email_id'].'</td>
+                    <th align="left">EMAIL ID</th>
+                    <td>'.$result['email_id'].'</td>
                 </tr>
                 <tr>
-                    <td>Roll No.</td>
+                    <th align="left">ROLL NUMBER</th>
                     <td>'.$result['rollno'].'</td>
                 </tr>
                 <tr>
-                    <td>First Name</td>
+                    <th align="left">FIRST NAME</th>
                     <td>'.$result['first_name'].'</td>
                 </tr>
                 <tr>
-                    <td>Middle Name</td>
+                    <th align="left">LAST NAME</th>
                     <td>'.$result['last_name'].'</td>
                 </tr>
                 <tr>
-                    <td>Address</td>
+                    <th align="left">ADDRESS</th>
                     <td>'.$result['address'].'</td>
                 </tr>
                 <tr>
-                    <td>Phone No.</td>
+                    <th align="left">PHONE NUMBER</th>
                     <td>'.$result['phone_no'].'</td>
                 </tr>
                 <tr>
-                    <td>D.O.B.</td>
+                    <th align="left">DATE OF BIRTH</th>
                     <td>'.$result['DOB'].'</td>
                 </tr>
             </table>
@@ -45,27 +47,29 @@
     }
     else if ($role == "faculty")  {
         echo('
-            <table border="1">
+            <table class="information">
                 <tr>
-                    <th colspan="2">'.$role.' Information</th>
+                    <th align="left">ROLE</th>
+                    <td colspan>'.$role.'</td>
                 </tr>
                 <tr>
-                    <td colspan="2">'.$result['email_id'].'</td>
+                    <th align="left">EMAIL ID</th>
+                    <td>'.$result['email_id'].'</td>
                 </tr>
                 <tr>
-                    <td>Roll No.</td>
+                    <th align="left">FACULTY ID</th>
                     <td>'.$result['id'].'</td>
                 </tr>
                 <tr>
-                    <td>First Name</td>
+                    <th align="left">FIRST NAME</th>
                     <td>'.$result['first_name'].'</td>
                 </tr>
                 <tr>
-                    <td>Middle Name</td>
+                    <th align="left">LAST NAME</th>
                     <td>'.$result['last_name'].'</td>
                 </tr>
                 <tr>
-                    <td>Phone No.</td>
+                    <th align="left">PHONE NUMBER</th>
                     <td>'.$result['phone_no'].'</td>
                 </tr>
             </table>
