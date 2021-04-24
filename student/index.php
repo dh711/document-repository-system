@@ -38,8 +38,8 @@ else {
         <a class="tablinks" href="../login/logout.php" id="4" class="bar-link">Logout</a>
     </div>
 
-    <div class="content">
-        <h2 class="page-title">Student Dashboard</h2>
+        <div class="content">
+            <h2 class="page-title">Student Dashboard</h2>
 
         <div class="tabcontent active" id="info">
             <h2 class="sub-title">Information</h2>
@@ -48,12 +48,12 @@ else {
             ?>
         </div>
 
-        <div class="tabcontent display-none" id="courses">
-            <h2 class="sub-title">Courses</h2>
-            <?php 
-                include_once('../common/courses.php');
-            ?>
-        </div>
+            <div class="tabcontent display-none" id="courses">
+                <h2 class="sub-title">Courses</h2>
+                <?php 
+                    include_once('../common/courses.php');
+                ?>
+            </div>
 
         <div class="tabcontent display-none" id="course-docs">
             <h2 class="sub-title">Course Documents</h2>
@@ -68,6 +68,5 @@ else {
                 include_once('./dlFiles.php');
             ?>
         </div>
-    </div>
-</body>
+    </body>
 </html>
