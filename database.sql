@@ -64,26 +64,3 @@ create table Teacher_Course (
     foreign key (course_id) references Course(id),
     foreign key (faculty_id) references faculty(id)
 );
-
-create table Attendance (
-    student_id varchar(8) not null,
-    course_id varchar(10) not null,
-    faculty_id varchar(10) not null,
-    date date not null,
-    present enum('y', 'n') not null,
-    foreign key (student_id) references student(rollNo),
-    foreign key (course_id) references Course(id),
-    foreign key (faculty_id) references faculty(id)
-);
-
-create table Payment (
-    id int not null auto_increment primary key,
-    amount int not null,
-    UTR int not null,
-    student_id varchar(8) not null,
-    date date not null,
-    time time not null,
-    Account_Holder_Name varchar(30) not null,
-    remarks varchar(30) not null,
-    foreign key (student_id) references student(rollNo)
-);
