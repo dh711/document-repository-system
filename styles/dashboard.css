@@ -112,7 +112,7 @@ body {
     font-weight: var(--font-display);
 }
 
-input[type="text"] {
+input[type="text"], input[type="password"],form input[type="date"],form input[type="number"],textarea{
     background: #2c3e50;
     border: none;
     width: 200px;
@@ -222,4 +222,7 @@ table .doc-head {
 
 .courses {
     overflow-y: scroll;
+}
+textarea {
+    resize: none;
 }

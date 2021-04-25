@@ -17,7 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         else {
             $targetDir = "../media/{$_POST['course']}/";
             if(!is_dir($targetDir))
+            {
                 mkdir($targetDir);
+            }
+             
 
             $targetFile = $targetDir . basename($_FILES["file"]["name"]);
 
