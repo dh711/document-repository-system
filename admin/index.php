@@ -10,10 +10,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['sub'])) {
         $activeTab = 1;
     }
-    // if (isset($_POST['receive'])) {
-    //     $activeTab = 4;
-    // }
-
+    if (isset($_POST['assign'])) {
+        $activeTab = 2;
+    }
+    if (isset($_POST['remove'])) {
+        $activeTab = 3;
+    }
+    if (isset($_POST['deassign'])) {
+        $activeTab = 4;
+    }
 }
 else {
     $activeTab = 1;
@@ -37,8 +42,9 @@ else {
 <div class="sidebar">
         <h3 class="username"><?php echo $_SESSION["username"];?></h3>
         <a class="tablinks" id="1" onclick="openTab(event, 'add')">Add Students</a>
-        <a class="tablinks" id="2" onclick="openTab(event, 'assign')">Assign Course</a>
-        <a class="tablinks" id="3" onclick="openTab(event, '')">Link 1</a>
+        <a class="tablinks" id="2" onclick="openTab(event, 'assign')">Assign Courses</a>
+        <a class="tablinks" id="3" onclick="openTab(event, 'remove')">Remove Students</a>
+        <a class="tablinks" id="4" onclick="openTab(event, 'deassign')">Deassign Courses</a>
         <a class="tablinks" href="../login/logout.php" id="4" class="bar-link">Logout</a>
     </div>
     <div class="content">
@@ -55,6 +61,18 @@ else {
             <h2 class="sub-title">Assign Course</h2>
             <?php 
                 include_once('./assign.php');
+            ?>
+        </div>
+        <div class="tabcontent display-none" id="remove">
+            <h2 class="sub-title">Remove Student</h2>
+            <?php 
+                include_once('./remove.php');
+            ?>
+        </div>
+        <div class="tabcontent display-none" id="deassign">
+            <h2 class="sub-title">Deassign Courses</h2>
+            <?php 
+                include_once('./deassign.php');
             ?>
         </div>
     </div> 

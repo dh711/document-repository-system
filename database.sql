@@ -54,8 +54,9 @@ create table CourseDocuments (
 create table Course_Student (
     course_id varchar(10) not null,
     student_id varchar(10) not null,
-    foreign key (student_id) references student(rollNo),
-    foreign key (course_id) references Course(id)
+    foreign key (student_id) references student(rollNo) ON DELETE CASCADE,
+    foreign key (course_id) references Course(id),
+    primary key (course_id,student_id)
 );
 
 create table Teacher_Course (
