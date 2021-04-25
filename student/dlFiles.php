@@ -6,7 +6,7 @@ $res = "";
 $courses = Student::getCourses();
 ?>
 
-<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" enctype="multipart/form-data">
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
     <div class="form-group">
         <select name="course" class="dropdown" required>
             <option disabled class="dropdown-content"selected>Select course...</option>

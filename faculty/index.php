@@ -10,12 +10,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['upload'])) {
         $activeTab = 3;
     }
-    if (isset($_POST['send'])) {
+    if (isset($_POST['del_search'])) {
         $activeTab = 4;
+    }
+    if (isset($_POST['send'])) {
+        $activeTab = 5;
     }
 }
 else {
-    $activeTab = 1;
+    if (isset($_GET['activeTab'])) {
+        $activeTab = 4;
+    }
+    else
+        $activeTab = 1;
 }
 
 ?>
@@ -38,7 +45,8 @@ else {
         <a class="tablinks" id="1" onclick="openTab(event, 'info')">Information</a>
         <a class="tablinks" id="2" onclick="openTab(event, 'courses')">Courses</a>
         <a class="tablinks" id="3" onclick="openTab(event, 'course-docs')">Upload Course Documents</a>
-        <a class="tablinks" id="4" onclick="openTab(event, 'msg')">Send Message</a>
+        <a class="tablinks" id="4" onclick="openTab(event, 'course-del')">Delete Course Documents</a>
+        <a class="tablinks" id="5" onclick="openTab(event, 'msg')">Send Message</a>
         <br><br>
         <a class="tablinks" href="../login/logout.php" id="4" class="bar-link">Logout</a>
     </div>
@@ -64,6 +72,13 @@ else {
             <h2 class="sub-title">Upload Course Documents.</h2>
             <?php 
                 include_once('./uploadForm.php');
+            ?>
+        </div>
+
+        <div class="courses tabcontent display-none" id="course-del">
+            <h2 class="sub-title">Delete Course Documents.</h2>
+            <?php 
+                include_once('./delForm.php');
             ?>
         </div>
 
