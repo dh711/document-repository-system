@@ -62,9 +62,10 @@ form input[type="text"], form input[type="password"] {
 }
 
 .form .radio-label {
-    font-weight: var(--font-bold);
-    font-size: var(--font-radio-label);
+    font-weight: 500;
+    font-size: 15px;
     line-height: 15px;
+    font-family: 'DM Mono', monospace;
 }
 
 .form .alert {
@@ -80,8 +81,9 @@ form input[type="text"], form input[type="password"] {
 
 .form .radio {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .form .btn {

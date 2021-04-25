@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     <br><br>
     <div class="msg-group">
-        <textarea name="msg" class="msg" rows="14" cols="100" form="msg-form"></textarea>
+        <textarea name="msg" class="msg" rows="12" cols="100" form="msg-form"></textarea>
     </div>
     <input type="submit" name="send" value="Send" class="btn btn-search">
 </form>

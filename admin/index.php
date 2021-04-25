@@ -15,13 +15,14 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <script type="text/javascript" src="../scripts/tabs.js"></script>
 </head>
 <body>
 <div class="sidebar">
-        <h3 class="username"><?php echo $_SESSION["username"]; ?></h3>
+        <h3 class="username"><?php echo $_SESSION["username"];?></h3>
         <a class="tablinks" id="1" onclick="openTab(event, 'courses')">Courses</a>
         <a class="tablinks" id="2" onclick="openTab(event, 'course-docs')">Course Documents</a>
         <a class="tablinks" id="3" onclick="openTab(event, '')">Link 1</a>

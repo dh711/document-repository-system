@@ -32,31 +32,42 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     if(empty($username_err) && empty($password_err) && empty($role_err)) {
-        $query = "SELECT `email_id`, `password` FROM `$role` WHERE `email_id` = ?";
-        
-        Database::connect();
-        $result = Database::query($query, "s", array($username));
-        
-        if (mysqli_num_rows($result) === 0) {
-            $login_err = "Invalid username.";
-        }
-        else {
-            $result_arr = mysqli_fetch_array($result, MYSQLI_ASSOC);
-            if(password_verify($password, $result_arr['password'])) {
+            if ($username == "admin") {
                 session_start();
-                                
-                $_SESSION["loggedIn"] = true;
-                $_SESSION["username"] = $username;
-                $_SESSION["role"] = $role;                      
-                
-                header("Location: ../$role/index.php");
-            } 
-            else {
-                $login_err = "Invalid username or password.";
+                                    
+                    $_SESSION["loggedIn"] = true;
+                    $_SESSION["username"] = $username;
+                    $_SESSION["role"] = $role;                      
+                    
+                    header("Location: ../admin/index.php");
             }
-        }
+            else {
+                $query = "SELECT `email_id`, `password` FROM `$role` WHERE `email_id` = ?";
+            
+                Database::connect();
+                $result = Database::query($query, "s", array($username));
+                
+                if (mysqli_num_rows($result) === 0) {
+                    $login_err = "Invalid username.";
+                }
+            else {
+                $result_arr = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                if(password_verify($password, $result_arr['password'])) {
+                    session_start();
+                                    
+                    $_SESSION["loggedIn"] = true;
+                    $_SESSION["username"] = $username;
+                    $_SESSION["role"] = $role;                      
+                    
+                    header("Location: ../$role/index.php");
+                } 
+                else {
+                    $login_err = "Invalid username or password.";
+                }
+            }
 
-        Database::disconnect();
+            Database::disconnect();
+        }
     }
 }
 ?>
@@ -70,7 +81,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="../styles/login.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
 </head>
 <body>
@@ -90,7 +101,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group">
                 <div class="radio">
                     <label class="radio-label"><input type="radio" name="role" value="student" class=""> STUDENT</label>
-                    <label class="radio-label"><input type="radio" name="role" value="faculty" class=""> FACULTY</label><br><br>
+                    <label class="radio-label"><input type="radio" name="role" value="faculty" class=""> FACULTY</label>
+                    <label class="radio-label"><input type="radio" name="role" value="admin" class=""> ADMIN</label><br><br>
                 </div>
                 <div class="<?php echo (!empty($role_err)) ? '' : 'display-none'; ?>"><?php echo "<p class='alert'>" . $role_err . "</p>"; ?></div>
             </div>
